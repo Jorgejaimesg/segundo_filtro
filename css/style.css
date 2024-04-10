@@ -183,7 +183,6 @@ body{
         filter: blur(0px);
         width: 55%;
         position: relative;
-        z-index: 1;
     }
     .big_box{
         flex-direction: row;
