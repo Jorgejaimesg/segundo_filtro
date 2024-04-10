@@ -34,6 +34,8 @@ body{
 }
 .ul_icon{
     width: 40%;
+    transition: 2s;
+    animation: iconmove 10s  1.5s;
 }
 .ul_title{
     font-size: 3em;
@@ -50,6 +52,7 @@ body{
     background-color: black;
     padding: 10px 20px;
     border-radius: 20px;
+    transition: 0.2s ease;
 }
 .up_right{
     position:fixed;
@@ -58,6 +61,7 @@ body{
     right: 0;
     filter:blur(2px);
     z-index: -1;
+    transition: 1s ease;
 }
 .ur_cup_img{
     position: absolute;
@@ -65,6 +69,7 @@ body{
     width: 50%;
     left:25%;
     z-index: 2;
+    transition: 2s ease;
 }
 .ur_small_back{
     position: absolute;
@@ -94,6 +99,7 @@ body{
     flex-direction: column;
     gap:10px;
     justify-content: center;
+    transition: 0.2s ease;
 }
 .box_txt_title{
     font-size: 1.5em;
@@ -105,9 +111,37 @@ body{
 }
 
 .ul_buttom:hover{
-    background-color:  #E8D9D6;
+    background-color:  #63636357;
     color: black;
-    overlay: black;
+    font-weight: bold;
+    scale: 1.1;
+}
+.box_txt:hover{
+    scale:1.05;
+}
+.ul_title:hover{
+    rotate: 5deg;
+}
+@keyframes iconmove {
+    0%{
+        rotate:0deg;
+    }
+    10%{
+        rotate: 50deg;
+    }
+    25%{
+        rotate: -30deg;
+    }
+    50%{
+        rotate: 50deg;
+    }
+    75%{
+        rotate: -30deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+    
 }
 @media (min-width:600px) {
     .container{
@@ -143,12 +177,13 @@ body{
     .ul_icon{
         width: 25%;
         position: relative;
-        bottom: -5vh;
+        bottom: -3vh;
     }
     .up_right{
         filter: blur(0px);
         width: 55%;
         position: relative;
+        z-index: 1;
     }
     .big_box{
         flex-direction: row;
